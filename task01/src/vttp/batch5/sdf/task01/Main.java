@@ -113,24 +113,8 @@ public class Main {
 		for(int i = 0; i < bikeEntriesTop5List.size(); i++) {
 			BikeEntry be = bikeEntriesTop5List.get(i);
 
-			/*
-			// printing out according to example output
-			System.out.printf("The %s (position) ", POSITION[i]);
-			System.out.printf("recorded number of cyclists was in %s (season), ", Utilities.toSeason(be.getSeason()));
-			System.out.printf("on a %s (day) ", Utilities.toWeekday(be.getWeekday()));			
-			System.out.printf("in the month of %s (month). ", Utilities.toMonth(be.getMonth()));	
-			System.out.printf("There were a total of %d (total) cyclists. ", (be.getCasual() + be.getRegistered()));
-
-			System.out.printf("The weather was %s (weather). ", weatherSitList.get(be.getWeather()-1));
-
-			if(be.isHoliday())
-				System.out.printf("%s (day) was a holiday.\n\n", Utilities.toWeekday(be.getWeekday()));
-			else
-				System.out.printf("%s (day) was not a holiday.\n\n", Utilities.toWeekday(be.getWeekday()));
-
-			*/
-
 			// printing out according to format as requested
+			/*
 			System.out.printf("The %s ", POSITION[i]);
 			System.out.printf("recorded number of cyclists was in %s, ", Utilities.toSeason(be.getSeason()));
 			System.out.printf("on a %s ", Utilities.toWeekday(be.getWeekday()));			
@@ -143,6 +127,21 @@ public class Main {
 				System.out.printf("%s was a holiday.\n", Utilities.toWeekday(be.getWeekday()));
 			else
 				System.out.printf("%s was not a holiday.\n", Utilities.toWeekday(be.getWeekday()));
+			*/
+
+			// printing out according to example output
+			System.out.printf("The %s (position) ", POSITION[i]);
+			System.out.printf("recorded number of cyclists was in %s (season), ", Utilities.toSeason(be.getSeason()));
+			System.out.printf("on a %s (day) ", Utilities.toWeekday(be.getWeekday()));			
+			System.out.printf("in the month of %s (month). ", Utilities.toMonth(be.getMonth()));	
+			System.out.printf("There were a total of %d (total) cyclist. ", (be.getCasual() + be.getRegistered()));
+
+			System.out.printf("The weather was %s (weather). ", weatherSitList.get(be.getWeather()-1));
+
+			if(be.isHoliday())
+				System.out.printf("%s (day) was a holiday.\n", Utilities.toWeekday(be.getWeekday()));
+			else
+				System.out.printf("%s (day) was not a holiday.\n", Utilities.toWeekday(be.getWeekday()));
 
 			// Add line break if its not last line
 			if(i < (bikeEntriesTop5List.size()-1))
